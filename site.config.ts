@@ -20,7 +20,7 @@ export default siteConfig({
   isPreviewImageSupportEnabled: true,
   isRedisEnabled: false,
 
-  // 중복된 canonical page ID들을 위한 고유한 URL 경로 지정
+  // 페이지가 없는 경우는 제외하고, 유효한 페이지만 매핑
   pageUrlOverrides: {
     '/action-1': 'ade7ff2b8e7a4b39b0a43be96f141359',
     '/action-2': 'bdc2c8d7e64f4dfe99f404bb0e6983bd',
@@ -37,6 +37,9 @@ export default siteConfig({
     '/inofi-aws-1': '05757f472dfe4eb8a9d18315240e2b3c',
     '/prisma-1': 'a2cd79a955c345bba5d9f2ace8bef99f'
   },
+
+  // 404 페이지 처리를 위한 설정 추가
+  notFoundPageId: null,
 
   navigationStyle: 'default'
 })
