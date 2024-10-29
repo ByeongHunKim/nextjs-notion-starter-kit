@@ -1,65 +1,42 @@
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
-  // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '6babe93281d6476995372b29f7b1915c',
+  rootNotionSpaceId: '924e83e5-b1a4-43f3-a09a-f18dcfc53d26', // 로그에서 발견된 spaceId 추가
 
-  // if you want to restrict pages to a single notion workspace (optional)
-  // (this should be a Notion ID; see the docs for how to extract this)
-  rootNotionSpaceId: null,
+  name: 'meiko',
+  domain: 'meiko',
+  author: 'Meiko',
+  description: 'Personal site of Meiko',
 
-  // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  twitter: '',
+  github: 'ByeongHunKim',
+  linkedin: 'byeonghun-kim-bb19bb236',
 
-  // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
-
-  // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
-  // mastodon: '#', // optional mastodon profile URL, provides link verification
-  // newsletter: '#', // optional newsletter URL
-  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
-
-  // default notion icon and cover images for site-wide consistency (optional)
-  // page-specific values will override these site-wide defaults
   defaultPageIcon: null,
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
-  // whether or not to enable support for LQIP preview images (optional)
   isPreviewImageSupportEnabled: true,
-
-  // whether or not redis is enabled for caching generated preview images (optional)
-  // NOTE: if you enable redis, you need to set the `REDIS_HOST` and `REDIS_PASSWORD`
-  // environment variables. see the readme for more info
   isRedisEnabled: false,
 
-  // map of notion page IDs to URL paths (optional)
-  // any pages defined here will override their default URL paths
-  // example:
-  //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
+  // 중복된 canonical page ID들을 위한 고유한 URL 경로 지정
+  pageUrlOverrides: {
+    '/action-1': 'ade7ff2b8e7a4b39b0a43be96f141359',
+    '/action-2': 'bdc2c8d7e64f4dfe99f404bb0e6983bd',
+    '/action-3': '60073bb6b8d942f69be451456abe8a3d',
+    '/action-4': '11439682877744d0ad529e0aaa9b9ea9',
+    '/action-5': 'fab52c7c8a0a46b483a66a8565df9f73',
+    '/action-6': 'f06cb58b870d4696b80d5a7f45fc21cb',
+    '/action-7': '6885f5c13b3e4ff7b02614e34749bc3e',
+    '/action-8': '2551351dd66c4dbfaddc3bdb1721fefa',
+    '/action-9': '851c877957f44d56bbcf060336bb18bb',
+    '/action-10': 'cac9884ffea64814aa8f88ee74782488',
+    '/action-11': '32d8ebaedcaa47a9bfb419c9914d8351',
+    '/page-1': '0c8394e9858f4ffe809f50e8c36cc988',
+    '/inofi-aws-1': '05757f472dfe4eb8a9d18315240e2b3c',
+    '/prisma-1': 'a2cd79a955c345bba5d9f2ace8bef99f'
+  },
 
-  // whether to use the default notion navigation style or a custom one with links to
-  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
   navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
 })
