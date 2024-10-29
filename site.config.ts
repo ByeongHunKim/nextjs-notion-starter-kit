@@ -38,8 +38,5 @@ export default siteConfig({
     '/prisma-1': 'a2cd79a955c345bba5d9f2ace8bef99f'
   },
 
-  // 404 페이지 처리를 위한 설정 추가
-  notFoundPageId: null,
-
   navigationStyle: 'default'
 })
